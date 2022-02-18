@@ -1,0 +1,38 @@
+.button1{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #337ab7;
+    border-radius: 0.25rem;
+    border: 1px solid #337ab7;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.35rem 0.5rem;
+}
+.button1:hover {
+    background-color: white;  
+    color: #337ab7;
+} 
+.button2{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 0.25rem;
+    border: 1px solid white;
+    color: #337ab7;
+    font-size: 0.75rem;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.35rem 0.5rem;
+}
+.button2:hover {
+    background-color: #337ab7;  
+    color: white;
+} 
