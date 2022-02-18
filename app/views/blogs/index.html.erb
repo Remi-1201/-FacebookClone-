@@ -18,9 +18,9 @@
         <tr>
           <td><%= button_to 'Delete', blog_path(blog.id), method: :delete, class: "button2" %></td>
 
-          <td><%= link_to 'Detail', blog_path(blog.id), class: "td_link" %></td>
+          <td><%= button_to 'Detail', blog_path(blog.id),  method: :get, class: "button2" %></td>
 
-          <td><%= link_to "Edit", edit_blog_path(blog.id), class: "td_link" %></td>          
+          <td><%= button_to "Edit", edit_blog_path(blog.id),  method: :get, class: "button2" %></td>          
         </tr>
       <% end %>
     </table>
