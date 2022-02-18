@@ -27,10 +27,8 @@ class BlogsController < ApplicationController
   def edit
   end
 
-
   def create
     @blog = current_user.blogs.build(blog_params)
-
     if params[:back]
       redirect_to blogs_path
     else
@@ -61,11 +59,12 @@ class BlogsController < ApplicationController
   end
 
   private
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
+  def set_blog
+    @blog = Blog.find(params[:id])
+  end
 
-    def blog_params
-      params.require(:blog).permit(:user_id, :title, :name, :image_cache, :content, :image)
-    end
-    end
+  def blog_params
+    params.require(:blog).permit(:user_id, :title, :name, :image_cache, :content, :image)
+  end
+
+end

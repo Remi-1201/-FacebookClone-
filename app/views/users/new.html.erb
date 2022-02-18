@@ -1,15 +1,15 @@
 <h1>Sign up</h1>
 <div class="errors">
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this <%= @user.name %> from being saved:</h2>
-    <ul>
-    <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this <%= @user.name %> from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 </div>
 <%= form_with(model: @user, local: true) do |f| %>  
   <p><%= f.label :name %></p>
@@ -25,6 +25,6 @@
   <p><%= f.password_field :password_confirmation %></p>
   <br>
   <p><%= f.submit "Create my account" %></p>
-  <br>
-  <br>
 <% end %>
+<br>
+<br>
