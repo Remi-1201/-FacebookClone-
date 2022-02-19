@@ -2,7 +2,11 @@
   <h1 class="title">My Facebook</h1>
   <p id="notice"><%= notice %></p>    
     <div class="contents">
-      <p><%= link_to 'All Posts', blogs_path %></p>
-      <p><%= link_to 'Make new Post', new_blog_path %></p>
+      <% if logged_in? %>
+        <p><div class="content1"><%= link_to 'All Posts', blogs_path %></div></p>
+        <p><div class="content2"><%= link_to 'Make new Post', new_blog_path %></div></p>
+      <% else %>
+        <p><div class="content1">Please log in to continue</div></p>
+      <% end %>
     </div>
 </div>
